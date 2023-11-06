@@ -23,6 +23,12 @@ Section:NewButton("Infinite Yield", "Executes Imfinite Yield", function()
     
 end) 
 
+Section:NewButton("IV Admin V3 FE", "Executes IV Admin V3 FE", function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/BloodyBurns/Hex/main/Iv%20Admin%20v3.lua"))()
+
+end) 
+
 local Tab = Window:NewTab("Universal Guis/Scripts")
 
 local Section = Tab:NewSection("Guis And Scripts")
@@ -30,4 +36,18 @@ local Section = Tab:NewSection("Guis And Scripts")
 Section:NewButton("Fly Gui V3", "Executes Fly Gui V3", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
     
+end) 
+
+Section:NewButton("WalkSpeed/Jumpower Gui", "Executes WalkSpeed/JumpPower Gui", function()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/dreampoopo/scripts/main/jailbreakspeedandjump", true))()
+    
+end) 
+
+local Tab = Window:NewTab("Extra/settings")
+
+local Section = Tab:NewSection("Extra/settings")
+
+Section:NewKeybind("Toggle Ui F", "Toggle the Ui", Enum.KeyCode.F, function()
+  Library:ToggleUI()
 end) 
