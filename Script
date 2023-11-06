@@ -1,0 +1,24 @@
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+
+local Window = Library.CreateLib("Universal Hub V1", "DarkTheme")
+
+local Tab = Window:NewTab("Player")
+
+local Section = Tab:NewSection("Walk speed/Jumppower")
+
+Section:NewSlider("WalkSpeed", "Changes Walkspeed", 100, 1, function(Value) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+end)
+
+Section:NewSlider("JumpPower", "Changes Jumppower", 100, 1, function(Value2) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value2
+end)
+
+local Tab = Tab:NewTab("Admin Scripts")
+
+local Section = Tab:NewSection("Admin Scripts")
+
+Section:NewButton("Infinite Yield", "Executes Imfinite Yield", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+    
+end)
